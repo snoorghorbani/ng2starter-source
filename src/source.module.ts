@@ -35,7 +35,6 @@ import { SourceReducers } from "./reducers";
 import { SourceService } from "./services";
 import { SourceListComponent, SourceUpsertComponent, SourceModuleContainerComponent } from "./smart-components";
 import { RoutingModule } from "./source.routing-module";
-import { GetSourcesApiModel } from "app/models/source";
 import { SourceEffects } from "./effects";
 // import { DiagramModule } from "app/diagram";
 //import { ConfigLoaded } from 'app/config/actions';

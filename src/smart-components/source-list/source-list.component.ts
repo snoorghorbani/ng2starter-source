@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { SocketService } from "@soushians/infra";
 import { SourceService } from "../../services";
 import { Observable } from "rxjs/Observable";
-import { GetSourcesApiModel } from "app/models/source";
+import { GetSourcesApiModel } from "../../models";
 import { Store } from "@ngrx/store";
 
 import * as FeatureReducer from "../../reducers";
@@ -16,8 +16,9 @@ import * as FeatureReducer from "../../reducers";
 export class SourceListComponent implements OnInit {
 	sources: Observable<GetSourcesApiModel.Response>;
 
-	constructor(private sourceService: SourceService) // private store: Store<FeatureReducer.FeatureState>
-	{
+	constructor(
+		private sourceService: SourceService // private store: Store<FeatureReducer.FeatureState>
+	) {
 		debugger;
 		this.sources = this.sourceService.getSources();
 		// this.sources.subscribe(data => { debugger})

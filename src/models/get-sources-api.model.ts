@@ -1,26 +1,21 @@
 import { Injectable } from "@angular/core";
 import { HttpRequestBaseModel } from "@soushians/shared";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-import { SourceModel } from "app/models/source/source.model";
+import { SourceModel } from "./source.model";
 
-export module GetSourcesApiModel {
+export namespace GetSourcesApiModel {
+	export class Request implements HttpRequestBaseModel<Request> {
+		constructor(initValue: GetSourcesApiModel.Request = {} as GetSourcesApiModel.Request) {
+			Object.keys(initValue).forEach((key) => (this[key] = initValue[key]));
+		}
 
-    export class Request implements HttpRequestBaseModel<Request>{
+		getRequestBody() {
+			return {};
+		}
+	}
 
-        constructor(initValue: GetSourcesApiModel.Request = {} as GetSourcesApiModel.Request) {
-            Object.keys(initValue).forEach(key => this[key] = initValue[key]);
-        }
-
-        getRequestBody() {
-            return {
-            }
-        }
-    }
-
-    export class Response {
-        Result:SourceModel[];
-        constructor() {
-
-        }
-    }
+	export class Response {
+		Result: SourceModel[];
+		constructor() {}
+	}
 }
