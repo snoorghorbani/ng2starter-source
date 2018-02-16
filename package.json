@@ -1,6 +1,6 @@
 {
 	"name": "@soushians/source",
-	"version": "1.0.45",
+	"version": "1.0.1",
 	"description": "",
 	"main": "lib/index.js",
 	"typings": [ "./lib/index.d.ts" ],
@@ -14,9 +14,7 @@
 		"build": "gulp &&  npm run transpile && npm run package && npm run minify"
 	},
 	"dependencies": {
-		"@soushians/infra": "^1.x.x",
 		"@soushians/shared": "^1.x.x",
-		"@soushians/config": "^1.x.x",
 		"@ngrx/effects": "^4.x.x",
 		"@ngrx/router-store": "^4.x.x",
 		"@ngrx/store": "^4.x.x",
