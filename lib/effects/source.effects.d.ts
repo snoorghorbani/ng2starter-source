@@ -1,9 +1,6 @@
-import "rxjs/add/operator/map";
-import "rxjs/add/operator/mergeMap";
-import "rxjs/add/operator/switchMap";
-import { Router } from "@angular/router";
 import { Observable } from "rxjs/Observable";
 import { Actions } from "@ngrx/effects";
+import { Router } from "@angular/router";
 import { SourceSubmitSucceed, SourceSubmitFailed } from "../actions";
 import { SourceService } from "../services";
 export declare class SourceEffects {
